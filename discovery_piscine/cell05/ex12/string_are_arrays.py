@@ -1,6 +1,10 @@
-many_words = input()
-count_z = many_words.count('z')
-if count_z:
-    print("z" * count_z)
+import sys
+
+if len(sys.argv) == 2:
+    count_z = sys.argv[1].count('z')   
+    if count_z > 0:
+        print("z" * count_z)
+    else:
+        print("none")
 else:
     print("none")
