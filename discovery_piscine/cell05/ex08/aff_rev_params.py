@@ -1,7 +1,7 @@
-many_words = input()
-word = [str(i.strip('"')) for i in many_words.split('" "')]
-if len(word) < 2:
-    print("none")    
-else:
-    for i in word:
+import sys
+
+if len(sys.argv) > 2:
+    for i in reversed(sys.argv[1:]):
         print(i)
+else:
+    print("none")
