@@ -1,9 +1,13 @@
-parts = input().strip().split('" "', 1)
+import sys
+import re
 
-if len(parts) != 2:
-    print("none")
+if len(sys.argv) == 3:
+    key = sys.argv[1]
+    text = sys.argv[2]
+    found = len(re.findall(key, text))
+    if found:
+        print(found)
+    else:
+        print("none")
 else:
-    key = parts[0].strip('"')
-    text = parts[1].strip('"')
-    found = text.count(key)
-    print(found if found else "none")
+    print("none")
