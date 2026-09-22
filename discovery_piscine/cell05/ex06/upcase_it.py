@@ -1,7 +1,6 @@
-many_words = input()
-word = str(many_words.strip("'"))
-word= str(word.strip('"'))
-if word:
-    print(word.upper())
+import sys
+
+if len(sys.argv) == 2:
+    print(sys.argv[1].upper())
 else:
     print("none")
