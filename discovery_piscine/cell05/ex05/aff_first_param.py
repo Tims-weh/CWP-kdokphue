@@ -1,3 +1,6 @@
-many_words = input()
-word = [str(i.strip('"')) for i in many_words.split('" "')]
-print(word[0] if word[0] else "none")
+import sys
+
+if len(sys.argv) > 1:
+    print(sys.argv[1])
+else:
+    print("none")
