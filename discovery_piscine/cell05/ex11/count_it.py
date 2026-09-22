@@ -1,9 +1,9 @@
-many_words = input()
-word = [i.strip('"') for i in many_words.split('" "')]
+import sys
 
-if word[0]:
-    print("parameters:", len(word))
-    for i in word:
+if len(sys.argv) > 1:
+    params = sys.argv[1:]
+    print(f"parameters: {len(params)}")
+    for i in params:
         print(f"{i}: {len(i)}")
 else:
     print("none")
