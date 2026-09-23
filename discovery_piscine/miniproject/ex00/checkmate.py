@@ -3,7 +3,7 @@ def checkmate(board: str):
         # --- ขั้นตอนที่ 1: เตรียมข้อมูลกระดาน ---
         # นำข้อความกระดานมาแยกเป็นบรรทัดๆ ด้วยคำสั่ง split('\n') 
         # และใช้ List Comprehension กรองบรรทัดที่ว่างเปล่า (Empty string) ทิ้งไป เพื่อป้องกันบั๊ก
-        rows = [row for row in board.split('\n') if row]
+        rows = board.splitlines()
         
         # ถ้าไม่มีข้อมูลในกระดานเลย (เช่น ส่งค่าว่างมา) ให้หยุดการทำงาน
         if not rows:
